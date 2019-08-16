@@ -5,17 +5,19 @@
   <meta charset="UTF-8">
   <meta name=description content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- with .Site.Params.themeColor }}
+	<meta name="theme-color" content="{{.}}">
+	<meta name="msapplication-TileColor" content="{{.}}">
+	{{- end }}
+  {{- partial "favicons.html" }}
   <title>{{.Title}}</title>
   {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
   <link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }}>
 </head>
 
 <body>
-
 <div class="container">
-
   <header>
-
     <nav id="menu">
 	    <ul id="menu-closed">
         {{- range .Site.Menus.main }}
@@ -25,11 +27,8 @@
 		    <li><a href="#menu">&#9776; Menu</a></li>
 	    </ul>
     </nav>
-
   </header>
-
   <main>{{ block "main" . -}}{{ end -}}</main>
-
   <footer>
     {{ block "title" . -}}{{ end -}}
     <p id="footer">
@@ -38,8 +37,6 @@
       {{- with (not (in (.Site.Language.Get "disableKinds") "RSS")) }}  <a href="{{ "posts/index.xml" | absURL }}" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>{{ end }}
     </p>
   </footer>
-
 </div>
-
 </body>
 </html>
