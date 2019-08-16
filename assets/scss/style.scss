@@ -129,7 +129,7 @@ hr {
 
 header {
   grid-area: a;
-  align-self: top;
+  align-self: flex-start;
   justify-self: stretch;
   padding: 0;
   margin: 0;
@@ -420,7 +420,7 @@ footer {
   ol {
     padding: 0;
     margin: 0.8em 0 0.8em 1.6em;
-    list-style-position: ouside;
+    list-style-position: outside;
     text-indent: 0.6em;
   }
 
