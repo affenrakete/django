@@ -1,0 +1,29 @@
+{{ define "title" }}
+{{ partialCached "title.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div id="main">
+  <h1>{{ .Title }}</h1>
+  {{- if .Content }}
+  <div class="content">
+	  {{ .Content }}
+	</div>
+	{{- end }}
+	{{- range .Data.Pages.GroupByDate "2006" }}
+	<div class="list-group">
+	  <div class="list-year" id="{{ .Key }}">{{ .Key }}</div>
+			<ul class="list">
+			  {{- range .Pages }}
+				<li class="list-item">
+					<a href="{{.Permalink}}">
+						<span class="list-item-title">{{.Title}}</span>
+						<span class="list-item-day">{{ .Date.Format .Site.Params.dateformShort }}</span>
+					</a>
+				</li>
+				{{- end }}
+			</ul>
+		</div>
+	{{- end }}
+</div>
+{{ end }}

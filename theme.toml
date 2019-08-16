@@ -1,0 +1,12 @@
+name = "django"
+license = "MIT"
+licenselink = "https://github.com/affenrakete/django/blob/master/LICENSE"
+description = "A minimal hugo theme"
+homepage = "https://github.com/affenrakete/"
+tags = ["dark", "responsive", "minimal"]
+features = []
+min_version = 0.5
+
+[author]
+  name = "Peter Siemer"
+  homepage = "https://affenrakete.de"

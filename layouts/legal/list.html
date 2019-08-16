@@ -1,0 +1,25 @@
+{{ define "title" }}
+{{ partialCached "title.html" . }}
+{{ end }}
+
+{{ define "main" }}
+<div id="main">
+  <h1>Legal</h1>
+  {{- if .Content }}
+  <div class="content">
+	  {{ .Content }}
+	</div>
+	{{- end }}
+	<div class="list-group">
+			<ul class="list">
+			  {{- range .Pages }}
+				<li class="list-item">
+					<a href="{{.Permalink}}">
+						<span class="list-item-title">{{.Title}}</span>
+					</a>
+				</li>
+				{{- end }}
+			</ul>
+		</div>
+</div>
+{{ end }}

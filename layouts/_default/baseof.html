@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{.Site.LanguageCode}}">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name=description content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{.Title}}</title>
+  {{ $style := resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "css/style.css" . | toCSS | minify | fingerprint -}}
+  <link rel="stylesheet" href="{{ $style.Permalink }}" {{ printf "integrity=%q" $style.Data.Integrity | safeHTMLAttr }}>
+</head>
+
+<body>
+
+<div class="container">
+
+  <header>
+
+    <nav id="menu">
+	    <ul id="menu-closed">
+        {{- range .Site.Menus.main }}
+		    <li><a href="{{ .URL | absLangURL }}">{{ .Name }}</a></li>
+        {{- end }}
+		    <li><a href="#menu-closed">&#215; Menu</a></li>
+		    <li><a href="#menu">&#9776; Menu</a></li>
+	    </ul>
+    </nav>
+
+  </header>
+
+  <main>{{ block "main" . -}}{{ end -}}</main>
+
+  <footer>
+    {{ block "title" . -}}{{ end -}}
+    <p id="footer">&copy; 2019 Peter Siemer  <a href="/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a></p>
+  </footer>
+
+</div>
+
+</body>
+</html>
