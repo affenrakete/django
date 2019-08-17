@@ -8,5 +8,5 @@ features = []
 min_version = 0.5
 
 [author]
-  name = "Peter Siemer"
-  homepage = "https://affenrakete.de"
+name = "Peter Siemer"
+homepage = "https://affenrakete.de"

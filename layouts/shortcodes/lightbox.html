@@ -1,30 +1,30 @@
 <!-- image -->
 <figure {{ with .Get "class" }}class="{{.}}"{{ end }}>
-    <!-- mobile -->
-    {{ if .Get "link"}}<a class="mobile" href="{{ .Get "src" }}">{{ end }}
-        <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
+  <!-- mobile -->
+  {{ if .Get "link"}}<a class="mobile" href="{{ .Get "src" }}">{{ end }}
+    <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
     {{ if .Get "link"}}</a>{{ end }}
     <!-- mobile -->
     <!-- desktop -->
     {{ with .Get "link"}}<a class="desktop" href="#{{.}}">{{ end }}
-        <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
-    {{ if .Get "link"}}</a>{{ end }}
-    <!-- desktop -->
-    {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
-    <figcaption>{{ if isset .Params "title" }}
+      <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
+      {{ if .Get "link"}}</a>{{ end }}
+      <!-- desktop -->
+      {{ if or (or (.Get "title") (.Get "caption")) (.Get "attr")}}
+      <figcaption>{{ if isset .Params "title" }}
         <h4>{{ .Get "title" }}</h4>{{ end }}
         {{ if or (.Get "caption") (.Get "attr")}}<p>
-        {{ .Get "caption" }}
-        {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
+          {{ .Get "caption" }}
+          {{ with .Get "attrlink"}}<a href="{{.}}"> {{ end }}
             {{ .Get "attr" }}
-        {{ if .Get "attrlink"}}</a> {{ end }}
-        </p> {{ end }}
-    </figcaption>
-    {{ end }}
-</figure>
-<!-- image -->
-<!-- lightbox -->
-<a href="#" class="lightbox" id="{{ .Get "link" }}">
-  <img src="{{ .Get "src" }}">
-</a>
-<!-- lightbox -->
+            {{ if .Get "attrlink"}}</a> {{ end }}
+          </p> {{ end }}
+        </figcaption>
+        {{ end }}
+      </figure>
+      <!-- image -->
+      <!-- lightbox -->
+      <a href="#" class="lightbox" id="{{ .Get "link" }}">
+        <img src="{{ .Get "src" }}">
+      </a>
+      <!-- lightbox -->
