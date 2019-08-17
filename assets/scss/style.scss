@@ -6,19 +6,6 @@ $light1:#e6e6e6;
 $light2:#F5F6FA;
 @import "syntax.scss";
 
-/* titillium-web-regular - latin */
-/* https://fonts.google.com/specimen/Titillium+Web */
-
-@font-face {
-  font-family: "Titillium Web";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Titillium Web Regular"), local("TitilliumWeb-Regular"), url({{ "/fonts/titillium-web-v7-latin-regular.woff2" | absLangURL }}) format("woff2"), /* Chrome 26+, Opera 23+, Firefox 39+ */
-  url({{ "/fonts/titillium-web-v7-latin-regular.woff" | absLangURL }}) format("woff");
-  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-
 /* titillium-web-900 - latin */
 /* https://fonts.google.com/specimen/Titillium+Web */
 
