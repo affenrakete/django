@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div id="home">
-  <h1 id="home-title">{{ .Site.Title }}</h1>
+  <h1 id="home-title"><a href="{{.Site.BaseURL}}">{{ .Site.Title }}</a></h1>
   {{- with .Site.Params.homeSubtitle }}
   <p id="home-subtitle">{{.}}</p>
   {{- end }}

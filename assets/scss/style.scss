@@ -144,13 +144,6 @@ main {
   padding: 0 1em;
 }
 
-#main {
-  justify-self: center;
-  margin: 0 auto;
-  max-width: 60em;
-  width: 100%;
-}
-
 footer {
   grid-area: c;
   align-self: center;
@@ -235,20 +228,21 @@ footer {
   }
 }
 
-#footer {
-  font-size: 0.8em;
-  float: right;
+#main {
+  justify-self: center;
+  margin: 0 auto;
+  max-width: 60em;
+  width: 100%;
 }
 
-#title {
+#home {
+  text-align: center;
+}
+
+#title, #home-title {
   font-family: "Titillium Web", "Helvetica", "Arial", "sans-serif";
-  float: left;
-  font-size: 1.5em;
-  font-weight: 900;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5em;
   text-transform: uppercase;
+  font-weight: 900;
   a {
     color: $light1;
     transition: 200ms;
@@ -259,18 +253,25 @@ footer {
   }
 }
 
-#home {
-  text-align: center;
+#title {
+  float: left;
+  font-size: 1.5em;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5em;
 }
 
 #home-title {
-  font-family: "Titillium Web", "Helvetica", "Arial", "sans-serif";
   font-size: 3em;
-  text-transform: uppercase;
 }
 
 #home-subtitle {
   margin-bottom: 2em;
+}
+
+#footer {
+  font-size: 0.8em;
+  float: right;
 }
 
 .list-group {
