@@ -120,9 +120,9 @@ hr {
 
 .container {
   height: 100vh;
-  width: 100vw;
+  width: 100%;
   display: grid;
-  grid-template-rows: 3em 1fr 3em;
+  grid-template-rows: 3em 1fr auto;
   grid-template-columns: 100%;
   grid-template-areas: "a" "b" "c";
 }
@@ -140,9 +140,15 @@ main {
   align-self: center;
   justify-self: stretch;
   width: 100%;
-  max-width: 60em;
-  margin: 0 auto;
+  margin: 0;
   padding: 0 1em;
+}
+
+#main {
+  justify-self: center;
+  margin: 0 auto;
+  max-width: 60em;
+  width: 100%;
 }
 
 footer {
@@ -259,7 +265,7 @@ footer {
 
 #home-title {
   font-family: "Titillium Web", "Helvetica", "Arial", "sans-serif";
-  font-size: 3.5em;
+  font-size: 3em;
   text-transform: uppercase;
 }
 
@@ -511,6 +517,9 @@ hr.post-end {
   main,
   footer {
     padding: 0 4em;
+  }
+  #home-title {
+    font-size: 3.5em;
   }
   .list-group {
     display: flex;
