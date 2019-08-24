@@ -1,5 +1,6 @@
 {{ define "main" }}
 <div id="home">
   <h1 id="home-title">{{ i18n "notFound" . }}</h1>
+  <p><a href="{{ "posts" | absURL }}"> {{ i18n "archives" }}</a></p>
 </div>
 {{ end }}
