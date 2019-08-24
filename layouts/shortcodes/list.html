@@ -1,0 +1,17 @@
+{{ if .Get "start" }}
+<div class="list-group">
+  <ul class="list">
+{{ end }}
+
+{{ if .Get "name" }}
+    <li class="list-item">
+      {{ if .Get "url" }}<a href="{{ .Get "url" | absLangURL }}">{{ end }}
+        <span class="list-item-title">{{ .Get "name" }}</span>
+      </a>
+    </li>
+{{ end }}
+
+{{ if .Get "end" }}
+  </ul>
+</div>
+{{ end }}

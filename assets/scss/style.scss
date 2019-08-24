@@ -261,42 +261,6 @@ footer {
   float: right;
 }
 
-.list-group {
-  margin-bottom: 3em;
-}
-
-.list-year {
-  margin-right: 2em;
-  margin-bottom: 0.5em;
-  font-size: 1.5em;
-  opacity: 0.8;
-}
-
-.list {
-  flex-grow: 1;
-}
-
-.list-item {
-  border-bottom: 1px $light1 dashed;
-  padding: 0.5em 0;
-  list-style-type: none;
-  a {
-    display: flex;
-    justify-content: space-between;
-    color: $light1;
-    transition: 200ms;
-    opacity: 1;
-  }
-  a:hover {
-    opacity: 0.5;
-  }
-  .list-item-day {
-    flex-shrink: 0;
-    margin-left: 1em;
-    opacity: 0.6;
-  }
-}
-
 .content {
   text-align: justify;
   a {
@@ -426,6 +390,47 @@ footer {
   }
 }
 
+.list-group {
+  margin-bottom: 3em;
+}
+
+.list-year {
+  margin-right: 2em;
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  opacity: 0.8;
+}
+
+.list {
+  flex-grow: 1;
+  text-indent: inherit !important;
+  margin: inherit !important;
+}
+
+.list-item {
+  border-bottom: 1px $light1 dashed;
+  padding: 0.5em 0;
+  list-style-type: none;
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    color: $light1;
+    transition: 200ms;
+    opacity: 1;
+    box-shadow: inherit !important;
+  }
+  a:hover {
+    opacity: 0.5;
+  }
+
+  .list-item-day {
+    flex-shrink: 0;
+    margin-left: 1em;
+    opacity: 0.6;
+  }
+}
+
 hr.post-end {
   width: 50%;
   margin: 1.6em 0;
@@ -509,9 +514,6 @@ hr.post-end {
   #home-title {
     font-size: 3.5em;
   }
-  .list-group {
-    display: flex;
-  }
   .content {
     figure {
       .mobile {
@@ -535,5 +537,8 @@ hr.post-end {
         left: calc(-45vw + 50%);
       }
     }
+  }
+  .list-group {
+    display: flex;
   }
 }
