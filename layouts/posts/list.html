@@ -6,9 +6,9 @@
 <div id="main">
   <h1>{{ .Title }}</h1>
   {{- if .Content }}
-  <div class="content">
+  <article class="content">
     {{ .Content }}
-  </div>
+  </article>
   {{- end }}
   {{- range .Data.Pages.GroupByDate "2006" }}
   <div class="list-group">
