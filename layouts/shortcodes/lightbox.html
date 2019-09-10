@@ -25,6 +25,6 @@
       <!-- image -->
       <!-- lightbox -->
       <a href="#" class="lightbox" id="{{ .Get "link" }}">
-        <img src="{{ .Get "src" }}">
+        <img src="{{ .Get "src" }}" {{ if or (.Get "alt") (.Get "caption") }}alt="{{ with .Get "alt"}}{{.}}{{else}}{{ .Get "caption" }}{{ end }}"{{ end }} />
       </a>
       <!-- lightbox -->
