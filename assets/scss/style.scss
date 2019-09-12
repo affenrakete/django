@@ -79,6 +79,15 @@ code {
   word-wrap: break-word;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 1.5em 0 1em;
+}
+
 h1 {
   font-size: 2em;
 }
@@ -300,6 +309,11 @@ footer {
   h6:hover a.anchor svg {
     visibility: visible;
   }
+
+  p {
+    margin: 1em 0;
+  }
+
   table {
     border-collapse: collapse;
     border-spacing: 0;
@@ -448,7 +462,7 @@ hr.post-end {
     letter-spacing: normal;
   }
   h1 {
-    margin: 0.1em 0 1.5em 0;
+    margin: 0.1em 0 1em 0;
   }
 }
 
